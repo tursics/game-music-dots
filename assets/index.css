@@ -1,0 +1,39 @@
+﻿@-ms-viewport {
+	width:device-width;
+}
+
+body, html {
+	background: #607D8B;
+	font-size: 1em;
+	margin: 0;
+	overflow: hidden;
+	-ms-content-zooming: none;
+	padding: 0;
+}
+
+#game {
+	background: #fff;
+	bottom: 1rem;
+	left: 1rem;
+	position: absolute;
+	right: 1rem;
+	top: 1rem;
+}
+
+.header .tone {
+	background: lightgray;
+	border-radius: 2rem;
+	display: inline-block;
+	height: 2rem;
+	margin: .5rem;
+	width: 2rem;
+}
+.header .tone.black {
+	background: black;
+}
+.header .tone.red {
+	background: red;
+}
+.header .tone.yellow {
+	background: #f6e234;
+}
