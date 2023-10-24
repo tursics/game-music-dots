@@ -61,7 +61,7 @@ function onButtonStart() {
 		volume = audioCtx.createGain();
 		volume.connect(audioCtx.destination);
 	}
-	volume.gain.value = 0.1;
+	volume.gain.value = 0.25;
 }
 
 function onTuneEnter(e) {
