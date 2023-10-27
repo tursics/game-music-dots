@@ -2,57 +2,57 @@ var sound = (function () {
 
 	var guitarNeck = [
 		// https://de.wikipedia.org/wiki/Frequenzen_der_gleichstufigen_Stimmung
-		{title:'C4',  frequency: '261.626'},
-//		{title:'C#4', frequency: '277.183'},
-		{title:'D4',  frequency: '293.665'},
-//		{title:'D#4', frequency: '311.127'},
-		{title:'E4',  frequency: '329.628'},
-		{title:'F4',  frequency: '349.228'},
-//		{title:'F#4', frequency: '369.994'},
-		{title:'G4',  frequency: '391.995'},
-//		{title:'G#4', frequency: '415.305'},
-		{title:'A4',  frequency: '440'},
-//		{title:'A#4', frequency: '466.164'},
-		{title:'B4',  frequency: '493.883'},
-		{title:'C5',  frequency: '523.251'},
-//		{title:'C#5', frequency: '554.365'},
-		{title:'D5',  frequency: '587.330'},
-		{title:'D#5', frequency: '622.254'},
-		{title:'E5',  frequency: '659.255'},
-		{title:'F5',  frequency: '698.456'},
-//		{title:'F#5', frequency: '739.989'},
-		{title:'G5',  frequency: '783.991'},
-//		{title:'G#5', frequency: '830.609'},
-		{title:'A5',  frequency: '880'},
-//		{title:'A#5', frequency: '932.328'},
-		{title:'B5',  frequency: '987.767'},
-		{title:'C6',  frequency: '1046.50'},
+		{name:'C4',  frequency: '261.626'},
+//		{name:'C#4', frequency: '277.183'},
+		{name:'D4',  frequency: '293.665'},
+//		{name:'D#4', frequency: '311.127'},
+		{name:'E4',  frequency: '329.628'},
+		{name:'F4',  frequency: '349.228'},
+//		{name:'F#4', frequency: '369.994'},
+		{name:'G4',  frequency: '391.995'},
+//		{name:'G#4', frequency: '415.305'},
+		{name:'A4',  frequency: '440'},
+//		{name:'A#4', frequency: '466.164'},
+		{name:'B4',  frequency: '493.883'},
+		{name:'C5',  frequency: '523.251'},
+//		{name:'C#5', frequency: '554.365'},
+		{name:'D5',  frequency: '587.330'},
+		{name:'D#5', frequency: '622.254'},
+		{name:'E5',  frequency: '659.255'},
+		{name:'F5',  frequency: '698.456'},
+//		{name:'F#5', frequency: '739.989'},
+		{name:'G5',  frequency: '783.991'},
+//		{name:'G#5', frequency: '830.609'},
+		{name:'A5',  frequency: '880'},
+//		{name:'A#5', frequency: '932.328'},
+		{name:'B5',  frequency: '987.767'},
+		{name:'C6',  frequency: '1046.50'},
 	];
 
 	var score = [
-		['E5', 4],
-		['E5', 4],
-		['E5', 4],
-		['C5', 8],
-		[0, 16],
-		['G5', 16],
-		['E5', 4],
-		['C5', 8],
-		[0, 16],
-		['G5', 16],
-		['E5', 4],
-		[0, 4],
-		['B5', 4],
-		['B5', 4],
-		['B5', 4],
-		['C6', 8],
-		[0, 16],
-		['G5', 16],
-		['D#5', 4],
-		['C5', 8],
-		[0, 16],
-		['G5', 16],
-		['E5', 4]
+		{name: 'E5',  duration: 4},
+		{name: 'E5',  duration: 4},
+		{name: 'E5',  duration: 4},
+		{name: 'C5',  duration: 8},
+		{name: '',    duration: 16},
+		{name: 'G5',  duration: 16},
+		{name: 'E5',  duration: 4},
+		{name: 'C5',  duration: 8},
+		{name: '',    duration: 16},
+		{name: 'G5',  duration: 16},
+		{name: 'E5',  duration: 4},
+		{name: '',    duration: 4},
+		{name: 'B5',  duration: 4},
+		{name: 'B5',  duration: 4},
+		{name: 'B5',  duration: 4},
+		{name: 'C6',  duration: 8},
+		{name: '',    duration: 16},
+		{name: 'G5',  duration: 16},
+		{name: 'D#5', duration: 4},
+		{name: 'C5',  duration: 8},
+		{name: '',    duration: 16},
+		{name: 'G5',  duration: 16},
+		{name: 'E5',  duration: 4},
 	];
 
 	var audioCtx = null;
@@ -62,6 +62,10 @@ var sound = (function () {
 
 	function funcGetGuitarNeck() {
 		return guitarNeck;
+	}
+
+	function funcGetMelody() {
+		return score;
 	}
 
 	function funcPlayNote(dataset) {
@@ -109,6 +113,7 @@ var sound = (function () {
 
 	return {
 		getGuitarNeck: funcGetGuitarNeck,
+		getMelody: funcGetMelody,
 		playNote: funcPlayNote,
 		reset: funcReset,
 		setVolume: funcSetVolume,

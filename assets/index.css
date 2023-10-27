@@ -15,25 +15,135 @@ body, html {
 	background: #fff;
 	bottom: 1rem;
 	left: 1rem;
+	padding: .5rem;
 	position: absolute;
 	right: 1rem;
 	top: 1rem;
 }
 
-.header .tone {
+.header {
+	height: 1rem;
+	position: relative;
+	z-index: 1;
+}
+
+.guitar {
+	border-bottom: .5rem solid #607D8B;
+	height: 14rem;
+	margin-bottom: 1rem;
+	overflow: hidden;
+	position: relative;
+	z-index: 0;
+}
+
+.tone {
 	background: lightgray;
 	border-radius: 2rem;
-	display: inline-block;
 	height: 2rem;
-	margin: .5rem;
+	position: absolute;
+	transition: top 2s linear 0s;
 	width: 2rem;
 }
-.header .tone.black {
+
+.guitar .tone {
+	top: -2rem;
+}
+
+.tone.black {
 	background: black;
 }
-.header .tone.red {
+.tone.red {
 	background: red;
 }
-.header .tone.yellow {
+.tone.yellow {
 	background: #f6e234;
+}
+.tone.hidden {
+	display: none;
+}
+.tone.n0 {
+	left: 0;
+}
+.tone.n1 {
+	left: 3rem;
+}
+.tone.n2 {
+	left: 6rem;
+}
+.tone.n3 {
+	left: 9rem;
+}
+.tone.n4 {
+	left: 12rem;
+}
+.tone.n5 {
+	left: 15rem;
+}
+.tone.n6 {
+	left: 18rem;
+}
+.tone.n7 {
+	left: 21rem;
+}
+.tone.n8 {
+	left: 24rem;
+}
+.tone.n9 {
+	left: 27rem;
+}
+.tone.n10 {
+	left: 30rem;
+}
+.tone.n11 {
+	left: 33rem;
+}
+.tone.n12 {
+	left: 36rem;
+}
+.tone.n13 {
+	left: 39rem;
+}
+.tone.n14 {
+	left: 42rem;
+}
+.tone.n15 {
+	left: 45rem;
+}
+.tone.n16 {
+	left: 48rem;
+}
+.tone.d16 {
+	height: 1rem;
+	top: -1rem;
+}
+.tone.d8 {
+	height: 2rem;
+	top: -2rem;
+}
+.tone.d4 {
+	height: 4rem;
+	top: -4rem;
+}
+.tone.d2 {
+	height: 8rem;
+	top: -8rem;
+}
+.tone.d1 {
+	height: 16rem;
+	top: -16rem;
+}
+.tone.falldown.d16 {
+	top: 29rem;
+}
+.tone.falldown.d8 {
+	top: 28rem;
+}
+.tone.falldown.d4 {
+	top: 26rem;
+}
+.tone.falldown.d2 {
+	top: 22rem;
+}
+.tone.falldown.d1 {
+	top: 14rem;
 }
