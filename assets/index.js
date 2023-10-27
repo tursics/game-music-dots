@@ -1,5 +1,5 @@
 var divGame = null;
-var guitarColor = ['gray','black','red','yellow','gray','gray','gray','gray','gray','gray','gray','gray','gray','gray','gray','gray'];
+var guitarColor = ['gray','black','red','yellow','gray'];
 
 function onButtonStart() {
 	sound.reset();
@@ -23,7 +23,7 @@ function addHeader() {
 	sound.getGuitarNeck().forEach(tone => {
 		var divTone = document.createElement('div');
 		divTone.classList.add('tone');
-		divTone.classList.add(guitarColor[index]);
+		divTone.classList.add(guitarColor[index] || 'gray');
 		divTone.dataset.frequency = tone.frequency;
 		divHeader.appendChild(divTone);
 

@@ -70,7 +70,7 @@ var sound = (function () {
 		}
 
 		var oscillator = audioCtx.createOscillator();
-		oscillator.type = 'triangle'; // square triangle
+		oscillator.type = 'triangle'; // square, triangle
 		oscillator.frequency.value = dataset.frequency;
 		oscillator.connect(volume);
 		oscillator.start();
