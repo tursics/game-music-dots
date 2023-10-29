@@ -3,7 +3,8 @@ var guitarColor = ['gray','black','red','yellow','gray'];
 var melodyPosition = 0;
 var noteStorageMax = 100;
 var noteStorage = [];
-var transitionDuration = 2000;
+var transitionDelay = 100;
+var transitionDuration = 5000;
 
 function dropNote(note) {
 	if (note.name === '') {
@@ -26,13 +27,14 @@ function dropNote(note) {
 		storageNote.classList.add('d' + note.duration);
 
 		window.setTimeout(function() {
+			storageNote.style.transitionDuration = transitionDuration + 'ms';
 			storageNote.classList.add('falldown');
-		}, 10);
-		window.setTimeout(function() {
+		}, transitionDelay);
+/*		window.setTimeout(function() {
 			storageNote.dataset.frequency = 0;
 			storageNote.className = '';
 			storageNote.classList.add('hidden');
-		}, transitionDuration + 1000);
+		}, transitionDuration + 1000);*/
 	} else {
 		console.log('too many notes');
 	}
@@ -53,7 +55,7 @@ function showNextNote() {
 
 		window.setTimeout(function() {
 			showNextNote();
-		}, 1000 / note.duration);
+		}, (1000 / note.duration) + 100);
 	} else {
 		melodyFinished();
 	}
