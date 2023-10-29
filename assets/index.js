@@ -15,7 +15,7 @@ function dropNote(note) {
 
 	for (var n = 0; n < noteStorageMax; ++n) {
 		var noteCurrent = noteStorage[n];
-		if (noteCurrent.classList.contains('hidden')) {
+		if (noteCurrent.classList.contains('invisible')) {
 			storageNote = noteCurrent;
 			break;
 		}
@@ -30,11 +30,16 @@ function dropNote(note) {
 			storageNote.style.transitionDuration = transitionDuration + 'ms';
 			storageNote.classList.add('falldown');
 		}, transitionDelay);
-/*		window.setTimeout(function() {
+		window.setTimeout(function() {
 			storageNote.dataset.frequency = 0;
 			storageNote.className = '';
-			storageNote.classList.add('hidden');
-		}, transitionDuration + 1000);*/
+			storageNote.classList.add('tone');
+			storageNote.classList.add('invisible');
+			delete storageNote.dataset.frequency;
+			delete storageNote.dataset.name;
+			delete storageNote.dataset.oscillator;
+			storageNote.style = '';
+			}, transitionDuration + 1000);
 	} else {
 		console.log('too many notes');
 	}
@@ -107,7 +112,7 @@ function addGuitar() {
 	for (var index = 0; index < noteStorageMax; ++index) {
 		var divTone = document.createElement('div');
 		divTone.classList.add('tone');
-		divTone.classList.add('hidden');
+		divTone.classList.add('invisible');
 		divTone.addEventListener('mouseenter', onTuneEnter);
 		divTone.addEventListener('mouseleave', onTuneLeave);
 
