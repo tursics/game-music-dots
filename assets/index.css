@@ -38,15 +38,17 @@ body, html {
 
 .tone {
 	background: lightgray;
-	border: 1rem solid #fff;
 	border-radius: 2rem;
 	height: 2rem;
+	margin-left: 1rem;
 	position: absolute;
 	transition: top unset linear 0s;
 	width: 2rem;
 }
 
 .guitar .tone {
+	border: 1rem double #fff;
+	margin-left: 0;
 	top: -2rem;
 }
 
