@@ -29,7 +29,7 @@ body, html {
 
 .guitar {
 	border-bottom: .5rem solid #607D8B;
-	height: 14rem;
+	height: 24rem;
 	margin-bottom: 1rem;
 	overflow: hidden;
 	position: relative;
@@ -38,10 +38,11 @@ body, html {
 
 .tone {
 	background: lightgray;
+	border: 1rem solid #fff;
 	border-radius: 2rem;
 	height: 2rem;
 	position: absolute;
-	transition: top 2s linear 0s;
+	transition: top unset linear 0s;
 	width: 2rem;
 }
 
@@ -133,17 +134,17 @@ body, html {
 	top: -16rem;
 }
 .tone.falldown.d16 {
-	top: 29rem;
+	top: 39rem;
 }
 .tone.falldown.d8 {
-	top: 28rem;
+	top: 38rem;
 }
 .tone.falldown.d4 {
-	top: 26rem;
+	top: 36rem;
 }
 .tone.falldown.d2 {
-	top: 22rem;
+	top: 32rem;
 }
 .tone.falldown.d1 {
-	top: 14rem;
+	top: 24rem;
 }
